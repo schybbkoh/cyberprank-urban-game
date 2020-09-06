@@ -97,14 +97,5 @@ function closeForm(id) {
 
 </script>
 
-<style type="text/css">
-td
-{
-    padding:0 15px;
-    margin-left:auto; 
-    margin-right:auto;
-}
-</style>
-
 </body>
 </html>
