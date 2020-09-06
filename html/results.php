@@ -22,7 +22,8 @@
 
 <h3>
 <?php
-include_once('php_variables/config-db.php');
+
+include_once ('php_variables/config-db.php');
 $dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
 $query = 'SELECT name, points FROM teams ORDER BY points DESC;';
@@ -32,19 +33,20 @@ $resultArr = pg_fetch_all($result);
 
 echo '<table>';
 
-foreach($resultArr as $array)
+foreach ($resultArr as $array)
 {
     echo '<tr>
-            <td>'. $array['name'].'</td>
-            <td>'. $array['points'].'</td>
+            <td>' . $array['name'] . '</td>
+            <td>' . $array['points'] . '</td>
           </tr>';
 }
 echo '</table>';
+
 ?>
 </h3>
 
 <?php
-include_once('php_variables/config-db.php');
+include_once ('php_variables/config-db.php');
 $dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
 $dbconn_time_query = 'SELECT extract(epoch from finish_hour) FROM timetable LIMIT 1;';

@@ -19,7 +19,8 @@
             <li><a href="results.php">WYNIKI</a></li>
         </ul>
     </div>
-    <h3>
+
+<h3>
 Zasady są następujące: <br>
 - na stronce opublikowano listę tematycznych zagadek<br>
 - zagadki są wspólne dla wszystkich, można rozwiązywać je w dowolnej kolejności<br>
@@ -40,7 +41,7 @@ Zasady są następujące: <br>
 </h3>
 
 <?php
-include_once('php_variables/config-db.php');
+include_once ('php_variables/config-db.php');
 $dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
 $dbconn_time_query = 'SELECT extract(epoch from finish_hour) FROM timetable LIMIT 1;';
