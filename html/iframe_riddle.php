@@ -60,10 +60,8 @@ echo '</select>
             echo "Rozwiązanie niepoprawne. Próbuj dalej.";
         }
 
-// Free resultset
 pg_free_result($result);
-
-// Closing connection
+pg_free_result($result2);
 pg_close($dbconn);
 }
 

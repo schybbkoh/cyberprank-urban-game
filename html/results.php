@@ -57,6 +57,7 @@ echo ';</script>';
 echo '<script type="text/javascript" src="scripts/timer.js">/<script>';
 
 pg_free_result($dbconn_time_query_result);
+pg_free_result($result);
 pg_close($dbconn);
 ?>
 
