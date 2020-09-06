@@ -32,7 +32,9 @@ $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
        {
             echo "Zagadka rozwiązana poprawnie!<br>";
             echo "Udaj się pod poniższe współrzędne i odnajdź wlepkę, a następnie wprowadź jej token, aby zdobyć punkt:<br>";
-            echo "$row[1], $row[2] <a href=\"http://www.google.com/maps/place/$row[1],$row[2]\" target=\"_blank\">KLIKNIJ TUTAJ, ABY OTWORZYĆ GOOGLE MAPS</a>";
+echo "$row[1], $row[2] lub ", '<span id="navigation"></span>';
+echo '<script type="text/javascript" src="scripts/navigation.js"></script>';
+echo '<script type="text/javascript"> navigate(', "$row[1]", ',', "$row[2]", '); </script>';
 
 echo '<div id='.$row[0].'>
 <form action="iframe_token.php" target='.$row[0].' method="post">
