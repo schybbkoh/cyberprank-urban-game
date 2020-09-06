@@ -40,6 +40,12 @@ foreach($resultArr as $array)
           </tr>';
 }
 echo '</table>';
+?>
+</h3>
+
+<?php
+include_once('php_variables/config-db.php');
+$dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
 $dbconn_time_query = 'SELECT extract(epoch from finish_hour) FROM timetable LIMIT 1;';
 $dbconn_time_query_result = pg_query($dbconn_time_query) or die('Query failed: ' . pg_last_error());
@@ -48,30 +54,13 @@ $game_finish_time = pg_fetch_row($dbconn_time_query_result);
 echo '<script type="text/javascript">var js_game_finish_time = ';
 echo $game_finish_time[0];
 echo ';</script>';
-echo '<script type="text/javascript" src="scripts/timer.js"></script>';
+echo '<script type="text/javascript" src="scripts/timer.js">/<script>';
 
-pg_free_result($result);
 pg_free_result($dbconn_time_query_result);
-
 pg_close($dbconn);
 ?>
-</h3>
 
-<script>
-function openForm(id) {
-  document.getElementById(id).style.display = "block";
-}
-
-function closeForm(id) {
-  document.getElementById(id).style.display = "none";
-}
-
-    var iframe = document.getElementById("iframe");
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    }
-
-</script>
+<script type="text/javascript" src="scripts/common.js"></script>
 
 </body>
 </html>

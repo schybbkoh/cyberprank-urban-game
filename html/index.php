@@ -71,21 +71,7 @@ pg_close($dbconn);
 ?>
 </h3>
 
-<script>
-function openForm(id) {
-  document.getElementById(id).style.display = "block";
-}
-
-function closeForm(id) {
-  document.getElementById(id).style.display = "none";
-}
-
-    var iframe = document.getElementById("iframe");
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    }
-
-</script>
+<script type="text/javascript" src="scripts/common.js"></script>
 
 <script>
 window.document.addEventListener('myCustomEvent', handleEvent, false)
