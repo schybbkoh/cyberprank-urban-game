@@ -52,7 +52,6 @@ pg_close($dbconn);
 ?>
 
 <script>
-// Set the date we're counting down to
 //var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 var countDownDate = new Date(<?php echo $game_finish_time[0]?>*1000)
 
@@ -83,18 +82,14 @@ var x = setInterval(function() {
 
 <script>
 function openForm(id) {
-//window.alert(id);
   document.getElementById(id).style.display = "block";
 }
 
 function closeForm(id) {
-//window.alert(id);
   document.getElementById(id).style.display = "none";
 }
 
-    // Selecting the iframe element
     var iframe = document.getElementById("iframe");
-    // Adjusting the iframe height onload event
     iframe.onload = function(){
         iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
     }

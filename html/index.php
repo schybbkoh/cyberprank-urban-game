@@ -26,7 +26,6 @@
 include_once('php_variables/config-db.php');
 $dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
-// Performing SQL query
 $query = 'SELECT id, riddle, solve_count, max_solve_count FROM riddles ORDER BY id';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
@@ -60,18 +59,15 @@ $dbconn_time_query = 'SELECT extract(epoch from finish_hour) FROM timetable LIMI
 $dbconn_time_query_result = pg_query($dbconn_time_query) or die('Query failed: ' . pg_last_error());
 $game_finish_time = pg_fetch_row($dbconn_time_query_result);
 
-// Free resultset
 pg_free_result($result);
 pg_free_result($dbconn_time_query_result);
 
-// Closing connection
 pg_close($dbconn);
 ?>
 </h3>
 
 <script>
 // Set the date we're counting down to
-//var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 var countDownDate = new Date(<?php echo $game_finish_time[0]?>*1000)
 
 // Update the count down every 1 second
@@ -101,18 +97,14 @@ var x = setInterval(function() {
 
 <script>
 function openForm(id) {
-//window.alert(id);
   document.getElementById(id).style.display = "block";
 }
 
 function closeForm(id) {
-//window.alert(id);
   document.getElementById(id).style.display = "none";
 }
 
-    // Selecting the iframe element
     var iframe = document.getElementById("iframe");
-    // Adjusting the iframe height onload event
     iframe.onload = function(){
         iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
     }
@@ -122,37 +114,18 @@ function closeForm(id) {
 <script>
 window.document.addEventListener('myCustomEvent', handleEvent, false)
 function handleEvent(e) {
-//console.log(e.detail) // outputs: {foo: 'bar'}
-//alert("");
-//alert(  JSON.stringify(e.detail)  );
 alert( e.detail.toString() );
 
 if ( e.detail.toString().includes("przeładowana")) {
   location.reload();
-//alert("przeladowany");
 }
 }
 </script>
 
 <style>
-/* The popup form - hidden by default */
 .hidden_by_default {
   display: none;
-  /*margin-left: auto;
-  margin-right: auto;
-   position: fixed; 
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9; */
 }
-/* #timer {
-    text-align: center;
-     color: #fcee09;
-     font-size: 16px;
-     font-weight: normal;
-         line-height: 24px;
-}*/
 
 iframe {
     width: 50%;

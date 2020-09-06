@@ -25,13 +25,10 @@
 include_once('php_variables/config-db.php');
 $dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
-// Performing SQL query
 $query = 'SELECT name, points FROM teams ORDER BY points DESC;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
-
 $resultArr = pg_fetch_all($result);
-//print_r($resultArr);
 
 echo '<table>';
 
@@ -48,18 +45,15 @@ $dbconn_time_query = 'SELECT extract(epoch from finish_hour) FROM timetable LIMI
 $dbconn_time_query_result = pg_query($dbconn_time_query) or die('Query failed: ' . pg_last_error());
 $game_finish_time = pg_fetch_row($dbconn_time_query_result);
 
-// Free resultset
 pg_free_result($result);
 pg_free_result($dbconn_time_query_result);
 
-// Closing connection
 pg_close($dbconn);
 ?>
 </h3>
 
 <script>
 // Set the date we're counting down to
-//var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 var countDownDate = new Date(<?php echo $game_finish_time[0]?>*1000)
 
 // Update the count down every 1 second
@@ -89,24 +83,19 @@ var x = setInterval(function() {
 
 <script>
 function openForm(id) {
-//window.alert(id);
   document.getElementById(id).style.display = "block";
 }
 
 function closeForm(id) {
-//window.alert(id);
   document.getElementById(id).style.display = "none";
 }
 
-    // Selecting the iframe element
     var iframe = document.getElementById("iframe");
-    // Adjusting the iframe height onload event
     iframe.onload = function(){
         iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
     }
 
 </script>
-
 
 <style type="text/css">
 td
