@@ -53,6 +53,8 @@ var event = new CustomEvent('myCustomEvent2', { detail: data })
 window.parent.document.dispatchEvent(event)
 </script>
 ";
+
+pg_free_result($result7);
 }
 else
 {
@@ -79,6 +81,12 @@ var event = new CustomEvent('myCustomEvent2', { detail: data })
 window.parent.document.dispatchEvent(event)
 </script>
 ";
+
+pg_free_result($result2);
+pg_free_result($result3);
+pg_free_result($result4);
+pg_free_result($result5);
+pg_free_result($result6);
 }
 }
 	}
@@ -94,13 +102,6 @@ window.parent.document.dispatchEvent(event)
 	}
 
 pg_free_result($result);
-pg_free_result($result2);
-pg_free_result($result3);
-pg_free_result($result4);
-pg_free_result($result5);
-pg_free_result($result6);
-pg_free_result($result7);
-
 pg_close($dbconn);
 }
 ?>
