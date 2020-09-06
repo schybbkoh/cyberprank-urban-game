@@ -21,9 +21,8 @@ $riddle_id = $_POST['riddle_id_given'];
 //echo "team_id=" . $team_id . "<br>";
 //echo "riddle_id=" . $riddle_id . "<br>";
 
-// Connecting, selecting database
-$dbconn = pg_connect("host=localhost dbname=cyberprank2069db user=cyberprank2069user password=cyberprank2069password")
-    or die('Could not connect: ' . pg_last_error());
+include_once('php_variables/config-db.php');
+$dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
 //$query = 'SELECT solution, coordinate_x, coordinate_y FROM riddles where id = 4';

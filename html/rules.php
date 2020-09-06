@@ -40,15 +40,15 @@ $FOTO_TOKENU
 </h3>
 
 <?php
-$dbconn_time = pg_connect("host=localhost dbname=cyberprank2069db user=cyberprank2069user password=cyberprank2069password")
-    or die('Could not connect: ' . pg_last_error());
+include_once('php_variables/config-db.php');
+$dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
 $dbconn_time_query = 'SELECT extract(epoch from finish_hour) FROM timetable LIMIT 1;';
 $dbconn_time_query_result = pg_query($dbconn_time_query) or die('Query failed: ' . pg_last_error());
 $game_finish_time = pg_fetch_row($dbconn_time_query_result);
 
 pg_free_result($dbconn_time_query_result);
-pg_close($dbconn_time);
+pg_close($dbconn);
 ?>
 
 <script>
