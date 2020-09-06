@@ -27,16 +27,16 @@ Zasady są następujące: <br>
 - rozwiązania to słowa składające tylko z litery (i ew. cyfr), ale bez polskich znaków diakrytycznych (ą, ę...), spacji i innych znaków specjalnych (?, $...)<br>
 - przykładowe rozwiązanie "Mały Kebab?" powinno być wpisane jako "malykebab"<br>
 - po rozwiązaniu zagadki otrzymacie koordynaty do odpowiedniej wlepki<br>
---- wszystkie wlepki rozmieszczono w promieniu $PROMIEŃ_GRY od miejsca zbiórki<br>
+--- wszystkie wlepki rozmieszczono w promieniu do 1500m od Hexa<br>
 --- wszystkie wlepki rozmieszczono w publicznie dostępnych miejscach na wysokości nie wyższej niż 2m<br>
-- należy dotrzeć do wlepki, odnaleźć ją i odczytać znajdujący się na niej token<br>
+- należy dotrzeć do koordynatów wlepki, odnaleźć ją i odczytać znajdujący się na niej token<br>
 - token następnie należy wprowadzić w formularzu pod wybraną zagadką aby zdobyć punkt<br>
 - jeden token może zostać wykorzystany tylko przez dwie grupy, później zagadka wygasa (będzie to odpowiednio oznaczone)<br>
 - po wygaśnięciu czasu gry (2 godziny, patrz: licznik na górze strony) punkty nie będą już przyznawane<br>
 - po zakończeniu zabawy spotykamy się w Hexie<br>
 
-<br>Przykładowa wlepka wygląda jak niżej:<br>
-$FOTO_TOKENU
+<br>Przykładowa wlepka wygląda jak niżej:<br><br>
+<img src="images/token.JPG" alt="Przykładowy token" style="width:25%;">
 </h3>
 
 <?php
