@@ -47,3 +47,8 @@ body {
      color: #de7e35;
      font-weight: bold;
 }
+td {
+    padding:0 15px;
+    margin-left:auto;
+    margin-right:auto;
+}
