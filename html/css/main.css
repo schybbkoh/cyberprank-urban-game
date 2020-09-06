@@ -1,0 +1,49 @@
+body {
+     background-color: #000;
+}
+ #timer {
+    text-align: center;
+     color: #fcee09;
+     font-size: 16px;
+     font-weight: normal;
+         line-height: 24px;
+}
+ h1 {
+     color: #fcee09;
+     text-align:center;
+     font-size: 30px;
+}
+ h2 {
+     color: #fcee09;
+     text-align:center;
+     font-size: 18px;
+}
+ h3 {
+     color: #fcee09;
+     font-size: 16px;
+     font-weight: normal;
+	 line-height: 24px;
+}
+ .menu {
+     text-align: center;
+	 font-size: 20px;
+	 text-decoration: none;
+}
+.menu ul {
+	list-style: none;
+}
+ .menu ul li {
+     display:inline-block;
+}
+.menu ul li a {
+	color: #fcee09;
+	text-decoration: none;
+	padding: 14px;
+}
+.menu li a:hover {
+     background-color: #253b4d;
+}
+.menu .active {
+     color: #de7e35;
+     font-weight: bold;
+}
