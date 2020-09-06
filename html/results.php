@@ -48,7 +48,7 @@ $game_finish_time = pg_fetch_row($dbconn_time_query_result);
 echo '<script type="text/javascript">var js_game_finish_time = ';
 echo $game_finish_time[0];
 echo ';</script>';
-echo '<script type="text/javascript" src="scripts/timer.js"><script>';
+echo '<script type="text/javascript" src="scripts/timer.js"></script>';
 
 pg_free_result($result);
 pg_free_result($dbconn_time_query_result);
