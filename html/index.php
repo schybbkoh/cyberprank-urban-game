@@ -122,16 +122,6 @@ if ( e.detail.toString().includes("przeładowana")) {
 }
 </script>
 
-<style>
-.hidden_by_default {
-  display: none;
-}
-
-iframe {
-    width: 50%;
-}
-</style>
-
 </body>
 
 </html>

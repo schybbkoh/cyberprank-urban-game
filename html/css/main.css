@@ -52,3 +52,9 @@ td {
     margin-left:auto;
     margin-right:auto;
 }
+.hidden_by_default {
+  display: none;
+}
+iframe {
+    width: 50%;
+}

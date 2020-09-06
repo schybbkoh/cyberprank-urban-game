@@ -34,7 +34,7 @@ $result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
             echo "Udaj się pod poniższe współrzędne i odnajdź wlepkę, a następnie wprowadź jej token, aby zdobyć punkt:<br>";
             echo "$row[1], $row[2] <a href=\"http://www.google.com/maps/place/$row[1],$row[2]\" target=\"_blank\">KLIKNIJ TUTAJ, ABY OTWORZYĆ GOOGLE MAPS</a>";
 
-echo '<div class="hidden_by_default" id='.$row[0].'>
+echo '<div id='.$row[0].'>
 <form action="iframe_token.php" target='.$row[0].' method="post">
   <input type="hidden" name="riddle_id_given" value='.$riddle_id.'>
   <label for="text">Token:</label>
