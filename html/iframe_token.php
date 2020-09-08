@@ -8,6 +8,7 @@
 
 <h3>
 <?php
+// react on submitting riddle solution
 if (isset($_POST['submit_token']))
 {
     $riddle_token = $_POST['token_given'];
@@ -21,6 +22,7 @@ if (isset($_POST['submit_token']))
     $result = pg_query_params($dbconn, $query, array ( $riddle_id )) or die('Query failed: ' . pg_last_error());
     $row = pg_fetch_row($result);
 
+    // check if the riddle has reached solve_count limit
     if ($row[1] >= $row[2])
     {
         echo "
@@ -33,14 +35,17 @@ if (isset($_POST['submit_token']))
     }
     else
     {
+	// check if token given is correct
         if ($row[0] == $riddle_token)
         {
             $query5 = 'SELECT extract(epoch from finish_hour) FROM timetable LIMIT 1;';
             $result5 = pg_query($query5) or die('Query failed: ' . pg_last_error());
             $row5 = pg_fetch_row($result5);
 
+	    // check if game time limit has passed
             if (time() > $row5[0])
             {
+		// this is to communicate with the top window and display proper message via alert
                 echo "
 		<script>
 		var data = 'Token jest poprawny, ale czas gry minął. Odpowiedzi nie są już przyjmowane. Wróć do lokalu. Stronka zostanie przeładowana.';
@@ -55,6 +60,7 @@ if (isset($_POST['submit_token']))
                 $result7 = pg_query_params($dbconn, $query7, array( $team_id, $riddle_id )) or die('Query failed: ' . pg_last_error());
                 $rows7 = pg_num_rows($result7);
 
+		// check if the team has already solved this riddle
                 if ($rows7 != 0)
                 {
                     echo "
@@ -69,21 +75,21 @@ if (isset($_POST['submit_token']))
                 }
                 else
                 {
+		    // insert log
                     $query2 = "INSERT INTO history VALUES (DEFAULT, DEFAULT, $1, $2)";
                     $result2 = pg_query_params($dbconn, $query2, array( $team_id, $riddle_id )) or die('Query failed: ' . pg_last_error());
 
+		    // insert point for the given team
                     $query3 = "UPDATE teams SET points = points + 1 WHERE id = $1";
                     $result3 = pg_query_params($dbconn, $query3, array( $team_id )) or die('Query failed: ' . pg_last_error());
 
+		    // update riddle's solve_count
                     $query4 = "UPDATE riddles SET solve_count = solve_count + 1 WHERE id = $1";
                     $result4 = pg_query_params($dbconn, $query4, array( $riddle_id )) or die('Query failed: ' . pg_last_error());
 
+		    // update team's list of solved riddles
                     $query6 = "UPDATE teams SET solved_riddles_by_id = array_append(solved_riddles_by_id, $1) WHERE id = $2;";
                     $result6 = pg_query_params($dbconn, $query6, array( $riddle_id, $team_id  )) or die('Query failed: ' . pg_last_error());
-
-                    $query5 = 'SELECT finish_hour FROM timetable WHERE id = 1';
-                    $result5 = pg_query($query5) or die('Query failed: ' . pg_last_error());
-                    $row5 = pg_fetch_row($result5);
 
                     echo "
 		    <script>

@@ -26,6 +26,7 @@
 include_once ('php_variables/config-db.php');
 $dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' . pg_last_error());
 
+// grab results from db and display them
 $query = 'SELECT name, points FROM teams ORDER BY points DESC;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 

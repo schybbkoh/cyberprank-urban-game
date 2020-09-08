@@ -29,12 +29,14 @@ $dbconn = pg_connect($postgresqlConnectionString) or die('Could not connect: ' .
 $query = 'SELECT id, riddle, solve_count, max_solve_count FROM riddles ORDER BY id';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
+// what this does is to basically load list of riddles from db and display them one by one
 while ($row = pg_fetch_row($result))
 {
     echo "zagadka #$row[0] <br>";
     echo "rozwiązana przez: $row[2] (z max $row[3] zespołów) <br>";
     echo "treść zagadki: \"$row[1]\" <br>";
 
+    // check if this riddle has reached it's solve_count limit
     if ($row[2] < $row[3])
     {
         echo "<button class=\"open-button\" onclick=\"openForm($row[0])\">KLIKNIJ, ABY ROZWIĄZAĆ ZAGADKĘ</button>";
@@ -73,6 +75,7 @@ pg_close($dbconn);
 ?>
 </h3>
 
+    // listen on messages from the bottom iframe and display them via alert
     <script type="text/javascript" src="scripts/common.js"></script>
     <script>
     window.document.addEventListener('myCustomEvent', handleEvent, false)
