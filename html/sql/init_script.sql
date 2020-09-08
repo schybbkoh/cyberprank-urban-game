@@ -89,5 +89,6 @@ ALTER TABLE timetable OWNER TO cyberprank2069user;
 
 --
 -- use this to configure timer
+-- TRUNCATE TABLE timetable;
 -- INSERT INTO timetable VALUES (DEFAULT, NOW() + INTERVAL '2 hours');
 -- 
