@@ -112,7 +112,7 @@ if (isset($_POST['submit_token']))
             echo "
 	    <script>
 	    var data = 'Podałeś niepoprawny token dla tej zagadki.';
-	    var event = new CustomEvent('myCustomEvent2', { detail: data })
+	    var event = new CustomEvent('send_event_to_top_iframe', { detail: data })
 	    window.parent.document.dispatchEvent(event)
 	    </script>
 	    ";

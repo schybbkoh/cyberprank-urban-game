@@ -78,10 +78,10 @@ if (isset($_POST['Submit']))
 // handle communication between bottom iframe and top window
 // this iframe is in between so it needs to relay messages
 <script>
-window.document.addEventListener('myCustomEvent2', handleEvent, false)
+window.document.addEventListener('send_event_to_top_iframe', handleEvent, false)
 
 function handleEvent(e2) {
-    var event = new CustomEvent('myCustomEvent', {
+    var event = new CustomEvent('send_event_to_top_window', {
 	detail: e2.detail.toString()
     })
     window.parent.document.dispatchEvent(event)

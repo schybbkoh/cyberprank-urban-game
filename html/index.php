@@ -78,7 +78,7 @@ pg_close($dbconn);
     // listen on messages from the bottom iframe and display them via alert
     <script type="text/javascript" src="scripts/common.js"></script>
     <script>
-    window.document.addEventListener('myCustomEvent', handleEvent, false)
+    window.document.addEventListener('send_event_to_top_window', handleEvent, false)
 
     function handleEvent(e) {
 	alert(e.detail.toString());
