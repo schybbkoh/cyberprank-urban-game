@@ -109,3 +109,9 @@ ALTER TABLE timetable OWNER TO cyberprank2069user;
 -- TRUNCATE TABLE timetable;
 -- INSERT INTO timetable VALUES (DEFAULT, NOW() + INTERVAL '2 hours');
 -- 
+
+
+--
+-- use this to check for history if you wish
+-- SELECT history.id, history.timestamp, teams.name FROM history INNER JOIN teams ON history.team_id = teams.id;
+--
