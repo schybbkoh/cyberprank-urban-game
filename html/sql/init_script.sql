@@ -17,7 +17,7 @@ CREATE TABLE riddles (
 
 ALTER TABLE riddles OWNER TO cyberprank2069user;
 
-INSERT INTO riddles VALUES (DEFAULT, 'Jaki zespół nagrał pierwsze kilka oficjalnie opublikowane utwory z gry?', 'refused', 0, 3, '123', '123', 'tfa18t1l');
+INSERT INTO riddles VALUES (DEFAULT, 'Jaki zespół nagrał pierwsze kilka oficjalnie opublikowanych utworów z gry?', 'refused', 0, 3, '123', '123', 'tfa18t1l');
 INSERT INTO riddles VALUES (DEFAULT, 'Kto podkładał głos pod trailer Deep Dive? (imię)', 'borys', 0, 3, '123', '123', '235fhhzs');
 INSERT INTO riddles VALUES (DEFAULT, 'Ile lat po swoim papierowym pierwowzorze dzieje się akcja CP2077?', '57', 0, 3, '123', '123', 'ef26qdmo');
 INSERT INTO riddles VALUES (DEFAULT, 'Jaki napój promuje pani z siusiakiem?', 'chromanticure', 0, 3, '123', '123', 'mw0r68rf');
@@ -31,13 +31,13 @@ INSERT INTO riddles VALUES (DEFAULT, 'Jakie zwierzę użycza imienia tym ostrzom
 
 INSERT INTO riddles VALUES (DEFAULT, 'Jaki napis na kurtce ma dziewczyna na oficjalnym plakacie promującym styl Kitsch?', 'getrichordietrying', 0, 3, '123', '123', '2qansgzx');
 INSERT INTO riddles VALUES (DEFAULT, 'Jaka była pierwotna data premiery CP2077? (np. 20151201)', '20200416', 0, 3, '123', '123', 'o1wup5l8');
-INSERT INTO riddles VALUES (DEFAULT, 'Kto użyczy głosu polskiemu Johnnyemu w CP2077?', 'michalzebrowski', 0, 3, '123', '123', 'vj4jhlmf');
+INSERT INTO riddles VALUES (DEFAULT, 'Kto użyczy głosu polskiemu Johnny''emu w CP2077?', 'michalzebrowski', 0, 3, '123', '123', 'vj4jhlmf');
 INSERT INTO riddles VALUES (DEFAULT, 'Jaką ksywkę ma postać z CP2077 nosząca na butach wiedźmińskie emblematy?', 'dex', 0, 3, '123', '123', 'up8zw3mz');
 INSERT INTO riddles VALUES (DEFAULT, 'Ile minut trwał walkthrough CP2077 z 2018?', '48', 0, 3, '123', '123', 'yqllrwdf');
 
 INSERT INTO riddles VALUES (DEFAULT, 'Jakiej marki samochodem porusza się V w trailerach?', 'quadra', 0, 3, '123', '123', 'x0tbjlnf');
 INSERT INTO riddles VALUES (DEFAULT, 'W którym roku umieszczona jest akcja pierwszej papierowej gry z serii Cyberpunk?', '2013', 0, 3, '123', '123', 'wu0v8a4y');
-INSERT INTO riddles VALUES (DEFAULT, 'Jak ma na imię główny bohater lub bohaterka CP2077?', 'v', 0, 3, '123', '123', '3rwdter7');
+INSERT INTO riddles VALUES (DEFAULT, 'Jak ma na imię znany z trailerów, wtrącający hiszpańskojęzyczne wstawki, przyjaciel V?', 'jackie', 0, 3, '123', '123', '3rwdter7');
 INSERT INTO riddles VALUES (DEFAULT, 'Osiemset jednostek czego podał lekarz Trauma Team pacjentce NC570442? (po angielsku)', 'fibrin', 0, 3, '123', '123', 'v10kk5sv');
 INSERT INTO riddles VALUES (DEFAULT, 'Kto będzie polskim wydawcą CP2077?', 'cenega', 0, 3, '123', '123', 'j4ysn01u');
 

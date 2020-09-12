@@ -26,9 +26,9 @@ Zasady są następujące: <br>
 - zagadki są wspólne dla wszystkich, można rozwiązywać je w dowolnej kolejności<br>
 - w celu rozwiązania zagadki należy użyć guzika i podać rozwiązanie<br>
 - rozwiązania to słowa składające tylko z litery (i ew. cyfr), ale bez polskich znaków diakrytycznych (ą, ę...), spacji i innych znaków specjalnych (?, $...)<br>
-- przykładowe rozwiązanie "Mały Kebab?" powinno być wpisane jako "malykebab"<br>
+- przykładowe rozwiązanie "Mały Kebab?!" powinno być wpisane jako "malykebab"<br>
 - po rozwiązaniu zagadki otrzymacie koordynaty do odpowiedniej wlepki<br>
---- wszystkie wlepki rozmieszczono w promieniu do około 1500m od Hexa<br>
+--- wszystkie wlepki rozmieszczono w promieniu do około 1200m od Hexa<br>
 --- wszystkie wlepki rozmieszczono w publicznie dostępnych miejscach na wysokości nie wyższej niż 2m<br>
 - należy dotrzeć do koordynatów wlepki, odnaleźć ją i odczytać znajdujący się na niej token<br>
 - token następnie należy wprowadzić w formularzu pod wybraną zagadką aby zdobyć punkt<br>
