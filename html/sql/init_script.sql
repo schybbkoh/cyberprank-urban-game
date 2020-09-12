@@ -113,5 +113,5 @@ ALTER TABLE timetable OWNER TO cyberprank2069user;
 
 --
 -- use this to check for history if you wish
--- SELECT history.id, history.timestamp, teams.name FROM history INNER JOIN teams ON history.team_id = teams.id;
+-- SELECT history.id, history.timestamp, history.riddle_id, teams.name FROM history INNER JOIN teams ON history.team_id = teams.id;
 --
