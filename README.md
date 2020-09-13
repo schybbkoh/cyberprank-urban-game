@@ -15,3 +15,15 @@ I was running the game using:
 - Cloudflare as a front
 - ElephantSQL as database provider
 - local storage provider for webserver
+
+*edit*
+My thoughts, todos and players' feedback after we played the game. It's likely that the following will never get done / implemented, but I feel it's still worth noting them down:
+- make the interface mobile-friendly, as it's mobiles that people are playing on
+- make sure ALL features are working properly on both Android and iOS (screw you, Apple)
+- ditch iframes in favor of a more modern and civilised solution (ie. Ajax)
+- improve quality of the code in general
+- either make coordinates very accurate (six decimals at least) or add location hints to every riddle (ie. "you can find the token by a bench")
+- for a game played on foot, a radius of 750m (1000m tops) seems reasonable, 1200-1500m is too big
+- 150-180 minutes of gameplay seem reasonable
+- teams of 3 seem like a good idea (or teams of 4 if you want to hint that it'd be a good idea to divide and conquer)
+- consider moving part of the infra (webserver and db) from a local provider to GCP or AWS (Azure = meh); while costs will remain similar, you'll get all the flexibility you can imagine
