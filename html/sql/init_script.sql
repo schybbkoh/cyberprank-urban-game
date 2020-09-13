@@ -21,7 +21,7 @@ INSERT INTO riddles VALUES (DEFAULT, 'Jaki zespół nagrał pierwsze kilka oficj
 INSERT INTO riddles VALUES (DEFAULT, 'Kto podkładał głos pod trailer Deep Dive? (imię)', 'borys', 0, 3, '50.057749', '19.934992', '235fhhzs');
 INSERT INTO riddles VALUES (DEFAULT, 'Ile lat po swoim papierowym pierwowzorze dzieje się akcja CP2077?', '57', 0, 3, '50.064', '19.934', 'ef26qdmo');
 INSERT INTO riddles VALUES (DEFAULT, 'Jaki napój promuje pani z siusiakiem?', 'chromanticure', 0, 3, '50.065546', '19.939378', 'mw0r68rf');
-INSERT INTO riddles VALUES (DEFAULT, 'Jak nazywa się seria filmików promujących CP2077?', 'deepdive', 0, 3, '50.066499', '19.941861', 'cqkis9t6');
+INSERT INTO riddles VALUES (DEFAULT, 'Jak nazywa się seria filmików promujących CP2077?', 'nightcitywire', 0, 3, '50.066499', '19.941861', 'cqkis9t6');
 
 INSERT INTO riddles VALUES (DEFAULT, 'Jak na drugie imię ma Mike P.?', 'alyn', 0, 3, '50.060838', '19.9393028', '40bpmfrn');
 INSERT INTO riddles VALUES (DEFAULT, 'W jaki dzień tygodnia i miesiąca opublikowano pierwszy teaser CP2077 od Platige? (np. poniedzialek15)', 'czwartek10', 0, 3, '50.060374', '19.941543', 'o4ady4lb');
