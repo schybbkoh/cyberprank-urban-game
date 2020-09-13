@@ -1,0 +1,8 @@
+<?php
+$postgresqlUser = 'cyberprank2069user';
+$postgresqlPassword = 'cyberprank2069password';
+$postgresqlDatabase = 'cyberprank2069db';
+$postgresqlHostname = 'localhost';
+
+$postgresqlConnectionString = 'host=' . $postgresqlHostname . ' dbname=' . $postgresqlDatabase . ' user=' . $postgresqlUser . ' password=' . $postgresqlPassword . '';
+?>
